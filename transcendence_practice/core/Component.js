@@ -9,7 +9,10 @@ export default class Component {
 		this.setUp();		// 컴포넌트 상태 설정
 		this.setEvent();	// 컴포넌트에서 발생할 이벤트 설정
 		this.render();		// UI 렌더링
+		this.renderBackground();
 	}
+
+	renderBackground() {}
 
 	setUp() {}
 

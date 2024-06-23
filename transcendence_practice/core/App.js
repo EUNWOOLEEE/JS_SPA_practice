@@ -7,6 +7,7 @@ export default class App extends Component {
 		return `
 		<head>
 			<a href="#/">home</a>
+			<a href="#background/">background</a>
 		</head>
 		<main></main>
 		`;
@@ -18,6 +19,10 @@ export default class App extends Component {
 
 		const router = new Router($main);
 		router.addRoute('#/', pages.home);
+		router.addRoute('#background/', pages.background);
+		
+		console.log('app mounted');
+
 		router.start();
 	}
 }

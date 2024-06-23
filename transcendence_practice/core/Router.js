@@ -16,6 +16,8 @@ export default class Router extends Component {
 			return route.fragment === window.location.hash;
 		});
 
+		console.log(window.location.hash);
+
 		if (!currentRoute) {
 			window.location.href = './#';
 			this.$state.routes[0].component();
@@ -26,6 +28,8 @@ export default class Router extends Component {
 	
 	start() {
 		window.addEventListener('hashchange', () => this.checkRoutes());
+
+		console.log('hashchange');
 		
 		if (!window.location.hash) {
 			window.location.hash = '#/';
